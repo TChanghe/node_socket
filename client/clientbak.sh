@@ -1,0 +1,1 @@
+ ./clientbak 192.168.88.131  status
