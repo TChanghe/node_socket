@@ -31,17 +31,6 @@ int main()
 	fseek(fp, 0, SEEK_SET);
 	fread(tmp, fileLen, sizeof(char), fp);
 	fclose(fp);
-	//printf("\n");
-
-	// if ((fp = fopen("masgout.txt", "wb")) == NULL)
-	// {
-	// 	printf("error");
-	// 	exit(0);
-	// }
-	// rewind(fp);
-	// fwrite(tmp, fileLen, sizeof(char), fp);
-	// fclose(fp);
-	//	free(tmp);
 
 	struct sockaddr_in servaddr;
 	int sockfd, client_fd;
@@ -120,7 +109,7 @@ int main()
 		char *cmd = "bash restart.sh";
 		int ret = system(cmd);
 		close(sockfd);
-		return 0;
+
 		if (ret != 0)
 		{
 			printf("execute result is %d", ret);
